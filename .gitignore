@@ -1,0 +1,7 @@
+# .gitignore
+.vscode/
+*.log
+.env
+node_modules/
+__pycache__/
+.DS_Store
