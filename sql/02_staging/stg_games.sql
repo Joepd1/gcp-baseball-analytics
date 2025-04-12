@@ -7,6 +7,7 @@ WITH
         SELECT DISTINCT
             g.gameId,
             g.seasonId,
+            g.seasonType,
             s.gameNumber,
             g.dayNight,
             s.startTime,
@@ -34,7 +35,8 @@ WITH
         SELECT DISTINCT
             gameId,
             seasonId,
-            NULL AS gameNumber,
+            seasonType,
+            CAST(NULL AS INT64) AS gameNumber,
             dayNight,
             startTime,
             duration,
@@ -49,8 +51,8 @@ WITH
             awayFinalRuns,
             awayFinalHits,
             awayFinalErrors,
-            NULL AS schedule_status,
-            NULL AS schedule_created
+            CAST(NULL AS STRING) AS schedule_status,
+            CAST(NULL AS TIMESTAMP) AS schedule_created
         FROM
             `devoteam-tech-challenge-456311.baseball.raw_games_post_wide`
     )
