@@ -27,8 +27,8 @@ WITH
             s.created AS schedule_created
         FROM
             -- Regular join because a match is required
-            `devoteam-tech-challenge-456311.baseball.raw_games_wide` g
-            JOIN `devoteam-tech-challenge-456311.baseball.raw_schedules` s ON g.gameId = s.gameId
+            `devoteam-tech-challenge-456311.baseball.raw_games_wide_filtered` g
+            JOIN `devoteam-tech-challenge-456311.baseball.raw_schedules_filtered` s ON g.gameId = s.gameId
     ),
     -- The games_post_wide table is extended with null for data that is not available
     post_games AS (

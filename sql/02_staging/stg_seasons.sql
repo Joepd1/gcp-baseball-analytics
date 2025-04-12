@@ -4,4 +4,4 @@ SELECT DISTINCT
     seasonId,
     year
 FROM
-    `devoteam-tech-challenge-456311.baseball.raw_schedules`
+    `devoteam-tech-challenge-456311.baseball.raw_schedules_filtered`
