@@ -16,13 +16,13 @@ The project starts from three publicly available base tables and processes them 
 This approach ensures separation of concerns and supports long-term extensibility.
 
 ## Modeling Approach
-![gcp-ert](https://hackmd.io/_uploads/SkOBX2i0Je.png)
+![ERD of the model](https://github.com/Joepd1/gcp-baseball-analytics/blob/main/docs/gcp-ert.png)
 
 The data model follows a star schema design with fact and dimension tables:
 - Fact tables: e.g. game and event data.
 - Dimension tables: teams, players, venues, game types, outcomes, etc.
 - Data marts: aggregated views for Looker Studio dashboards (e.g. team standings, pitcher performance).
-![gcp-conceptual-modle](https://hackmd.io/_uploads/rkZI7hjCkl.jpg)
+![gcp-conceptual-modle](https://github.com/Joepd1/gcp-baseball-analytics/blob/main/docs/gcp-conceptual-modle.jpg)
 
 A conceptual model ("Player performs Event in a Game, part of a Season, played by a Team in a Venue") underlies the relational ERD.
 
